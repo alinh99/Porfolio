@@ -177,7 +177,7 @@ lmdb @ file:///C:/b/abs_556ronuvb2/croot/python-lmdb_1682522366268/work
 locket @ file:///C:/ci/locket_1652904031364/work
 lxml @ file:///C:/b/abs_c2bg6ck92l/croot/lxml_1679646459966/work
 lz4 @ file:///C:/b/abs_064u6aszy3/croot/lz4_1686057967376/work
-Mako==1.2.1
+Mako==1.2.2
 Markdown @ file:///C:/b/abs_98lv_ucina/croot/markdown_1671541919225/work
 markdown-it-py @ file:///C:/b/abs_a5bfngz6fu/croot/markdown-it-py_1684279915556/work
 MarkupSafe @ file:///C:/ci/markupsafe_1654508077284/work
