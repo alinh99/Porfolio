@@ -1,6 +1,6 @@
 ## portfolio-flask
 
-I have developed a portfolio web app using Python/Flask and deployed to Google Cloud Platform. You can view the deployed version at [mkilicarslan.com](https://mkilicarslan.com).
+I have developed a portfolio web app using Python/Flask and deployed to zeet.co. You can view the deployed version at [mkilicarslan.com](https://mkilicarslan.com).
 
 ### Roadmap
 
