@@ -89,7 +89,7 @@ entrypoints @ file:///C:/ci/entrypoints_1649926621128/work
 et-xmlfile==1.1.0
 exceptiongroup @ file:///C:/b/abs_25wqfvkf25/croot/exceptiongroup_1668714345637/work
 executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
-fastapi==0.65.1
+fastapi==0.65.2
 fastjsonschema @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_ebruxzvd08/croots/recipe/python-fastjsonschema_1661376484940/work
 filelock @ file:///C:/b/abs_c7yrhs9uz2/croot/filelock_1672387617533/work
 flake8 @ file:///C:/b/abs_9f6_n1jlpc/croot/flake8_1674581816810/work
