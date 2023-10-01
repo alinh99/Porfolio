@@ -312,7 +312,7 @@ queuelib==1.5.0
 regex @ file:///C:/ci/regex_1658258307256/work
 replit==3.2.5
 reportlab==4.0.5
-requests==2.25.1
+requests==2.31.0
 requests-file @ file:///Users/ktietz/demo/mc3/conda-bld/requests-file_1629455781986/work
 requests-toolbelt @ file:///C:/b/abs_2fsmts66wp/croot/requests-toolbelt_1690874051210/work
 responses @ file:///tmp/build/80754af9/responses_1619800270522/work
