@@ -1,8 +1,6 @@
 import csv
 from flask import Flask, render_template, url_for, request, redirect
 from admin import skills, general_information, experience, projects
-from database import db
-from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL as SMTP
 import os
@@ -14,11 +12,6 @@ SMTP_SERVER = os.environ.get("SMTP_SERVER", "")
 PORT = os.environ.get("PORT", 0)
 RECEPIENT_EMAIL = os.environ.get("RECEPIENT_EMAIL", "")   
 PASSWORD = os.environ.get("PASSWORD", "")
-
-db.init_app(app)
-
-with app.app_context():
-    db.create_all()
 
 @app.route('/thank-you')
 def thank_you():
