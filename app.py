@@ -21,6 +21,7 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
+mail.connect()
 
 @app.route('/thank-you')
 def thank_you():
@@ -36,7 +37,9 @@ def homepage():
         try:
             msg = Message(subject=subject, sender = email, recipients = [RECEPIENT_EMAIL])
             msg.body = f"Name: {name}" + "\n" + f"Message: {message}"
+            
             mail.send(msg)
+            
             return redirect(url_for("thank_you"))
         except Exception as e:
             return str(e)
