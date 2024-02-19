@@ -1,8 +1,6 @@
 import csv
 from flask import Flask, render_template, url_for, request, redirect
 from admin import general_information, experience, projects
-from email.mime.text import MIMEText
-from smtplib import SMTP_SSL as SMTP
 import os
 from flask_mail import Mail
 from flask_mail import Message
@@ -12,9 +10,8 @@ PORT = os.environ.get("PORT", 0)
 RECEPIENT_EMAIL = os.environ.get("RECEPIENT_EMAIL", "")   
 PASSWORD = os.environ.get("PASSWORD", "")
 
-mail = Mail()
-
 app = Flask(__name__)
+mail= Mail(app)
 
 app.config['MAIL_SERVER']= SMTP_SERVER
 app.config['MAIL_PORT'] = PORT
@@ -23,7 +20,7 @@ app.config['MAIL_PASSWORD'] = PASSWORD
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
-mail.init_app(app)
+mail = Mail(app)
 
 @app.route('/thank-you')
 def thank_you():
