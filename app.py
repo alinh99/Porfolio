@@ -32,6 +32,7 @@ def homepage():
             msg['From'] = email
 
             mail.set_debuglevel(False)
+            mail.starttls()
             mail.login(general_information["email"], PASSWORD)
             
             mail.sendmail(msg['From'],general_information["email"], msg.as_string())
