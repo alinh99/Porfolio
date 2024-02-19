@@ -3,8 +3,10 @@ from flask import Flask, render_template, url_for, request, redirect
 from admin import general_information, experience, projects
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL as SMTP
-import ssl
+from dotenv import load_dotenv
 import os
+
+load_dotenv('.env')
 
 app = Flask(__name__)
 

@@ -20,7 +20,6 @@ general_information = {
     """,
     "position": "Python Developer",
     "degree": "Computer Engineer",
-    "age": 24,
 }
 
 experience = [
