@@ -34,7 +34,7 @@ def homepage():
             mail.set_debuglevel(False)
             mail.login(general_information["email"], PASSWORD)
             
-            mail.sendmail(from_addr=msg['From'],to_addrs=general_information["email"], msg=msg.as_string())
+            mail.sendmail(msg['From'],general_information["email"], msg.as_string())
             return redirect(url_for("thank_you"))
         except Exception as e:
             return str(e)
