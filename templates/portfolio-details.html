@@ -53,8 +53,23 @@
               <ul>
                 <li><strong>Category</strong>: {{details["type"]}}</li>
                 <li><strong>Language</strong>: {{details["language"]}}</li>
-                <li><strong>Development Platform</strong>: {{', '.join(details["platform_developments"])}}</li>
-                <li><strong>Job Description</strong>: 
+                <li><strong>Development Platform</strong></li>
+                {% for platform in details["platform_developments"] %}
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    
+                  <li>{{ platform }}</li>
+                  
+                </ul>
+                {% endfor %}
+                <li><strong>Libraries</strong>:
+                  {% for library in details["libraries"] %}
+                  <ul style="list-style-type: disc; margin-left: 20px;">
+                    
+                    <li>{{ library }}</li>
+                    
+                  </ul>
+                  {% endfor %}
+                <li><strong>Contribution</strong>:
                   {% for detail in details["details"] %}
                   <ul style="list-style-type: disc; margin-left: 20px;">
                     

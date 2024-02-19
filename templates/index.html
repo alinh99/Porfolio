@@ -85,7 +85,7 @@
 
         <div class="row">
           <div class="col-lg-4">
-            <img src="../static/assets/images/image.jpg" class="img-fluid" alt="">
+            <img src="../static/assets/images/avatar/image.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>Python Developer</h3>
@@ -179,9 +179,15 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           {%for project in projects%}
-          <div class="col-md-4 portfolio-item">
+          <div class="col-md-3 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="https://avatars.githubusercontent.com/u/57538082?v=4" class="img-fluid" alt="">
+              {% if "Machine Learning" in project["type"] %}
+              <img src="../static/assets/images/portfolio/machine_learning.jpg" class="img-fluid" alt="">
+              {% elif "Web" in project["type"] %}
+              <img src="../static/assets/images/portfolio/web.jpg" class="img-fluid" alt="">
+              {% else %}
+              <img src="../static/assets/images/portfolio/app.jpg" class="img-fluid" alt="">
+              {% endif %}
               <div class="portfolio-info">
                 <h4>{{project["title"]}}</h4>
                 <p>{{project["type"]}}</p>

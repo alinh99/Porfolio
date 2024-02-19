@@ -213,7 +213,7 @@ projects = [
             "Crawl Data from website",
             "Export to CSV file"
         ],
-        "type": "Web Crawling",
+        "type": "Web",
         "language": "Python",
         "platform_developments": [
             "Windows",
@@ -233,7 +233,7 @@ projects = [
             "Get Order and Product data",
             "Export CSV file"
         ],
-        "type": "Shopify API",
+        "type": "Web",
         "language": "Python",
         "platform_developments": [
             "Windows",
@@ -252,7 +252,7 @@ projects = [
             "Get user data by tags",
             "Get metrics of Tiktok Business"
         ],
-        "type": "Tiktok API",
+        "type": "Web",
         "language": "Python",
         "platform_developments": [
             "Windows",
@@ -284,9 +284,10 @@ projects = [
     },
     {
         "title": "Odoo Website API",
-        "link": "#",
+        "link": "https://artisanspirits.com.au/",
         "details": [
-            "Integrate Odoo Website API to build a website in Odoo"
+            "Write APIs to get all distilleries, blogs, pagination, search, ...",
+            "Create new module in Odoo and custom Products module"
         ],
         "type": "Web",
         "language": "Python",
