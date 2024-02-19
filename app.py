@@ -26,6 +26,7 @@ def homepage():
         message = request.form.get("message")
         try:
             mail=SMTP(host=SMTP_SERVER, port=PORT)
+            mail.connect(host=SMTP_SERVER, port=PORT)
             
             mail.login(general_information["email"], PASSWORD)
             
