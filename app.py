@@ -4,14 +4,26 @@ from admin import general_information, experience, projects
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL as SMTP
 import os
-
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///portfolio.db"
+from flask_mail import Mail
+from flask_mail import Message
 
 SMTP_SERVER = os.environ.get("SMTP_SERVER", "")
 PORT = os.environ.get("PORT", 0)
 RECEPIENT_EMAIL = os.environ.get("RECEPIENT_EMAIL", "")   
 PASSWORD = os.environ.get("PASSWORD", "")
+
+mail = Mail()
+
+app = Flask(__name__)
+
+app.config['MAIL_SERVER']= SMTP_SERVER
+app.config['MAIL_PORT'] = PORT
+app.config['MAIL_USERNAME'] = RECEPIENT_EMAIL
+app.config['MAIL_PASSWORD'] = PASSWORD
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
+mail.init_app(app)
 
 @app.route('/thank-you')
 def thank_you():
@@ -25,18 +37,9 @@ def homepage():
         subject = request.form.get("subject")
         message = request.form.get("message")
         try:
-            mail=SMTP(host=SMTP_SERVER, port=PORT)
-            mail.connect(host=SMTP_SERVER, port=PORT)
-            
-            mail.login(general_information["email"], PASSWORD)
-            
-            contents = f"Name: {name}" + "\n" + f"Email: {email}" + "\n" + f"Message: {message}"
-
-            msg = MIMEText(contents)
-            msg["Subject"] = subject
-            
-            mail.sendmail(email, RECEPIENT_EMAIL, msg=msg.as_string())
-            mail.close()
+            msg = Message(subject=subject, sender = email, recipients = [RECEPIENT_EMAIL])
+            msg.body = f"Name: {name}" + "\n" + f"Message: {message}"
+            mail.send(msg)
             return redirect(url_for("thank_you"))
         except Exception as e:
             return str(e)
