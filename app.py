@@ -1,10 +1,9 @@
 import csv
 from flask import Flask, render_template, url_for, request, redirect
-from admin import skills, general_information, experience, projects
+from admin import general_information, experience, projects
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL as SMTP
 import os
-from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///portfolio.db"
@@ -25,21 +24,22 @@ def homepage():
         email = request.form.get("email")
         subject = request.form.get("subject")
         message = request.form.get("message")
-        
-        mail=SMTP(host=SMTP_SERVER, port=PORT)
-        
-        mail.login(general_information["email"], PASSWORD)
-        
-        contents = f"Name: {name}" + "\n" + f"Email: {email}" + "\n" + f"Message: {message}"
+        try:
+            mail=SMTP(host=SMTP_SERVER, port=PORT)
+            
+            mail.login(general_information["email"], PASSWORD)
+            
+            contents = f"Name: {name}" + "\n" + f"Email: {email}" + "\n" + f"Message: {message}"
 
-        msg = MIMEText(contents)
-        msg["Subject"] = subject
-        
-        mail.sendmail(email, RECEPIENT_EMAIL, msg=msg.as_string())
-        mail.close()
-        return redirect(url_for("thank_you"))
-
-    return render_template('index.html', skill_length=skills.items(), information=general_information, exp=experience, projects=projects)
+            msg = MIMEText(contents)
+            msg["Subject"] = subject
+            
+            mail.sendmail(email, RECEPIENT_EMAIL, msg=msg.as_string())
+            mail.close()
+            return redirect(url_for("thank_you"))
+        except Exception as e:
+            return str(e)
+    return render_template('index.html', information=general_information, exp=experience, projects=projects)
 
 @app.route('/portfolio-details/<int:portfolio_id>')
 def portfolio_details(portfolio_id):
