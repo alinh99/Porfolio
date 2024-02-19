@@ -1,0 +1,53 @@
+<section id="resume" class="resume">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Resume</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="resume-title">Sumary</h3>
+                <div class="resume-item pb-0">
+                    <h4>{{information["name"]}}</h4>
+                    <p><em>Deadline-driven Python Developer with 1+ years of experience developing software as well as
+                            AI
+                            products from initial concept to final, polished deliverable.</em></p>
+                    <ul>
+                        <li>{{information["address"]}}</li>
+                        <li><a href="tel: {{information['phone']}}">{{information["phone"]}}</a></li>
+                        <li><a href="mailto: {{information['email']}}">{{information["email"]}}</a></li>
+                    </ul>
+                </div>
+
+                <h3 class="resume-title">Education</h3>
+                <div class="resume-item">
+                    <h4>Computer Engineer</h4>
+                    <h5>2018 - 2023</h5>
+                    <p><em>Institute for Research & Executive Education</em></p>
+                    <p>GPA: 3.2/4.0</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <h3 class="resume-title">Professional Experience</h3>
+                {%for e in exp%}
+                <div class="resume-item">
+                    <h4>{{e["title"]}}</h4>
+                    <h5>{{e["time"]}}</h5>
+                    <p><em>{{e["company"]}}</em></p>
+                    {%for job in e["jobs"]%}
+                    <strong>{{job["title"]}}</strong>
+                    {%for detail in job["details"]%}
+                    <ul>
+                        <li>{{detail}}</li>
+                    </ul>
+                    {%endfor%}
+                    {%endfor%}
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+
+    </div>
+</section>

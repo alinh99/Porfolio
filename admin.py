@@ -1,18 +1,26 @@
-skills = {
-            "Data Analyst": 90, 
-            "Python": 90, 
-            "API": 90, 
-            "SQL": 80, 
-            "Pytorch": 70, 
-            "Tensorflow": 70, 
-            "Machine Learning": 80
-}
-
 general_information = {
     "name": "Ryan Nguyen",
     "address": "Danang, Vietnam",
     "phone": "+84937739735",
-    "email": "alinh1803@gmail.com"
+    "email": "alinh1803@gmail.com",
+    "phone_display": "+84 937 739 735",
+    "birthday": "18 March 2000",
+    "website": "https://nhl-portfolio.onrender.com/",
+    "objectives": 
+    """
+        I'm a seasoned professional with a rich background in web development and technology
+        integration. Proficient in Python, PHP, Laravel, Flask, I specialize in creating dynamic
+        and efficient web applications. My expertise extends to containerization using Docker,
+        ensuring seamless deployment and scalability. A tech enthusiast, I bring valuable experience
+        in AI integration, enhancing applications with cutting-edge functionalities. API development
+        is a forte, fostering smooth communication between diverse systems. With a keen focus on ERP
+        solutions, I specialize in Odoo and its external API, showcasing versatility in crafting
+        tailored, efficient systems. Let's embark on a journey of innovation and efficiency together!
+        ✨
+    """,
+    "position": "Python Developer",
+    "degree": "Computer Engineer",
+    "age": 24,
 }
 
 experience = [
