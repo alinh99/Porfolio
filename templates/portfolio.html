@@ -9,7 +9,6 @@
             {%for project in projects%}
             <div class="col-md-3 portfolio-item">
                 <div class="portfolio-wrap">
-                    {{ url_for('static', filename='assets/images/portfolio/web.jpg') }}
                     {% if "Machine Learning" in project["type"] %}
                     <img src="{{ url_for('static', filename='assets/images/portfolio/machine_learning.jpg') }}" class="img-fluid" alt="">
                     {% elif "Web" in project["type"] %}
