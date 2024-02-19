@@ -1,27 +1,17 @@
 import csv
 from flask import Flask, render_template, url_for, request, redirect
 from admin import general_information, experience, projects
+from email.mime.text import MIMEText
+from smtplib import SMTP_SSL as SMTP
+import ssl
 import os
-from flask_mail import Mail
-from flask_mail import Message
-import time
-
-SMTP_SERVER = os.environ.get("SMTP_SERVER", "")
-PORT = os.environ.get("PORT", 0)
-RECEPIENT_EMAIL = os.environ.get("RECEPIENT_EMAIL", "")   
-PASSWORD = os.environ.get("PASSWORD", "")
 
 app = Flask(__name__)
-mail= Mail(app)
 
-app.config['MAIL_SERVER']= SMTP_SERVER
-app.config['MAIL_PORT'] = PORT
-app.config['MAIL_USERNAME'] = RECEPIENT_EMAIL
-app.config['MAIL_PASSWORD'] = PASSWORD
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
-
-mail = Mail(app)
+SMTP_SERVER = os.environ.get("SMTP_SERVER", "")
+PORT = 465
+RECEPIENT_EMAIL = os.environ.get("RECEPIENT_EMAIL", "")   
+PASSWORD = os.environ.get("PASSWORD", "")
 
 @app.route('/thank-you')
 def thank_you():
@@ -35,12 +25,14 @@ def homepage():
         subject = request.form.get("subject")
         message = request.form.get("message")
         try:
-            mail.connect()
-            time.sleep(10)
-            msg = Message(subject=subject, sender = email, recipients = [RECEPIENT_EMAIL])
-            msg.body = f"Name: {name}" + "\n" + f"Message: {message}"
+            contents = f"Name: {name}" + "\n" + f"Email: {email}" + "\n" + f"Message: {message}"
+            msg = MIMEText(contents)
+            msg["Subject"] = subject
             
-            mail.send(msg)
+            with SMTP(SMTP_SERVER, PORT) as server:
+                server.ehlo()
+                server.login(general_information["email"], PASSWORD)
+                server.sendmail(email, RECEPIENT_EMAIL, msg=msg.as_string())
             
             return redirect(url_for("thank_you"))
         except Exception as e:
