@@ -9,18 +9,19 @@
             {%for project in projects%}
             <div class="col-md-3 portfolio-item">
                 <div class="portfolio-wrap">
+                    {{ url_for('static', filename='assets/images/portfolio/web.jpg') }}
                     {% if "Machine Learning" in project["type"] %}
-                    <img src="../static/assets/images/portfolio/machine_learning.jpg" class="img-fluid" alt="">
+                    <img src="{{ url_for('static', filename='assets/images/portfolio/machine_learning.jpg') }}" class="img-fluid" alt="">
                     {% elif "Web" in project["type"] %}
-                    <img src="../static/assets/images/portfolio/web.jpg" class="img-fluid" alt="">
+                    <img src="{{ url_for('static', filename='assets/images/portfolio/web.jpg') }}" class="img-fluid" alt="">
                     {% else %}
-                    <img src="../static/assets/images/portfolio/app.jpg" class="img-fluid" alt="">
+                    <img src="{{ url_for('static', filename='assets/images/portfolio/app.jpg') }}" class="img-fluid" alt="">
                     {% endif %}
                     <div class="portfolio-info">
                         <h4>{{project["title"]}}</h4>
                         <p>{{project["type"]}}</p>
                         <div class="portfolio-links">
-                            <a href="{{url_for('portfolio_details', portfolio_id=loop.index)}}"
+                            <a href="{{ url_for('portfolio_details', portfolio_id=loop.index) }}"
                                 class="portfolio-details-lightbox" data-glightbox="type: external"
                                 title="Portfolio Details"><i class="bx bx-show"></i></a>
                             <a href="{{project['link']}}" target="_blank" title="Projects' Link"><i

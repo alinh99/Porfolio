@@ -4,6 +4,7 @@ from admin import general_information, experience, projects
 import os
 from flask_mail import Mail
 from flask_mail import Message
+import time
 
 SMTP_SERVER = os.environ.get("SMTP_SERVER", "")
 PORT = os.environ.get("PORT", 0)
@@ -21,7 +22,6 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
-mail.connect()
 
 @app.route('/thank-you')
 def thank_you():
@@ -35,6 +35,8 @@ def homepage():
         subject = request.form.get("subject")
         message = request.form.get("message")
         try:
+            mail.connect()
+            time.sleep(10)
             msg = Message(subject=subject, sender = email, recipients = [RECEPIENT_EMAIL])
             msg.body = f"Name: {name}" + "\n" + f"Message: {message}"
             
