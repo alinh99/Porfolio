@@ -131,14 +131,6 @@ projects = [
                 "info": "/static/assets/videos/EnglishForIT/listening_done.mp4",
                 "description": "Listening Function"
             },
-            {
-                "info": "/static/assets/videos/EnglishForIT/speaking_done.mp4",
-                "description": "Speaking Function"
-            },
-            {
-                "info": "/static/assets/videos/EnglishForIT/writing_done.mp4",
-                "description": "Writing Function"
-            },
         ]
     },
     {
