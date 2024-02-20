@@ -248,7 +248,7 @@ projects = [
                 "description": "Relationship between voice of male and female in function of meanfun and meanfreq"
             },
             {
-                "info": "/static/assets/images/portfolio/VoiceRecognitionBasedOnSex/results_visualization.png",
+                "info": "/static/assets/images/portfolio/VoiceRecognitionBasedOnSex/results_visualization.PNG",
                 "description": "Accuracy Score in each model"
             }
         ]
