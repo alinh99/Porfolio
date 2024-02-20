@@ -37,9 +37,22 @@
                         </li>
                     </ul>
                 </div>
+                {% if "images" in details %}
                 <div class="portfolio-description">
                     <h2>Showcases</h2>
+                    {% for image in details["images"] %}
+                    {% if "mp4" in image['info'] %}
+                    <video width="320" height="240" controls class="center">
+                        <source src="{{ image['info'] }}" type="video/mp4">
+                    </video>
+                    {% else %}
+                    <img src="{{ image['info'] }}" alt="" class="center">
+                    {% endif %}
+                    <p style="text-align: center; font-size: smaller;"><em>{{ image["description"] }}</em></p>
+                    {% endfor %}
+                    <br>
                 </div>
+                {% endif %}
             </div>
 
         </div>

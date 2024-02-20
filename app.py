@@ -1,6 +1,6 @@
 import csv
 from flask import Flask, render_template, url_for, request, redirect
-from admin import general_information, experience, projects
+from admin import general_information, experiences, projects
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL as SMTP
 from dotenv import load_dotenv
@@ -39,11 +39,15 @@ def homepage():
             return redirect(url_for("thank_you"))
         except Exception as e:
             return str(e)
-    return render_template('index.html', information=general_information, exp=experience, projects=projects)
+    return render_template('index.html', information=general_information, exp=experiences, projects=projects)
 
 @app.route('/portfolio-details/<int:portfolio_id>')
 def portfolio_details(portfolio_id):
-    return render_template('portfolio-details.html', details=projects[portfolio_id-1])
+    details = projects[portfolio_id - 1]
+    if "images" in details:
+        for image in details['images']:
+            image['index'] = details['images'].index(image)
+    return render_template('portfolio-details.html', details=details)
 
 @app.route('/<string:page_name>')
 def html_page(page_name):

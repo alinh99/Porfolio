@@ -1,3 +1,5 @@
+from flask import url_for
+
 general_information = {
     "name": "Ryan Nguyen",
     "address": "Danang, Vietnam",
@@ -22,7 +24,7 @@ general_information = {
     "degree": "Computer Engineer",
 }
 
-experience = [
+experiences = [
     {
         "title": "Freelancer",
         "time": "12/2023 - Present",
@@ -101,12 +103,60 @@ experience = [
 
 projects = [
     {
+        "title": "English for IT",
+        "link": "https://github.com/alinh99/eng_for_it",
+        "details": [
+            "Front-end and Back-end handling for this app",
+            "Authentication: Firebase",
+            "Functions: Help students learn 4 skills: Reading, Writing, Speaking, and Listening via tests and calculate points after these tests",
+            "Data: Manual Input",
+            "Fix bugs"
+        ],
+        "type": "App",
+        "language": "Dart & Flutter",
+        "platform_developments": [
+            "Android"
+        ],
+        "libraries": [
+            "Firebase",
+            "Text to Speech",
+            "Speech To Text"
+        ],
+        "images": [
+            {
+                "info": "/static/assets/videos/EnglishForIT/authentication_done.mp4",
+                "description": "Authentication Function with Firebase"
+            },
+            {
+                "info": "/static/assets/videos/EnglishForIT/listening_done.mp4",
+                "description": "Listening Function"
+            },
+            {
+                "info": "/static/assets/videos/EnglishForIT/speaking_done.mp4",
+                "description": "Speaking Function"
+            },
+            {
+                "info": "/static/assets/videos/EnglishForIT/writing_done.mp4",
+                "description": "Writing Function"
+            },
+            {
+                "info": "/static/assets/videos/EnglishForIT/quiz_done.mp4",
+                "description": "Quiz Function"
+            },
+            {
+                "info": "/static/assets/videos/EnglishForIT/profile_done.mp4",
+                "description": "Profile Function"
+            },
+        ]
+    },
+    {
         "title": "RUL Prediction",
         "link": "https://github.com/alinh99/CarAuctionPrediction",
         "details": [
             "Analyze, Filter, and Visualize Data",
             "Training Data with Deep Learning Models: LSTM, CNN, MLP",
-            "Predict RUL in each Model"
+            "Predict RUL in each Model",
+            "Fix bugs"
         ],
         "type": "Data Analyst & Machine Learning",
         "language": "Python",
@@ -121,6 +171,40 @@ projects = [
             "Numpy",
             "Sklearn",
             "Seaborn"
+        ],
+        "images": [
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_train_result.PNG",
+                "description": "Prediction in Train Result in LSTM model"
+            },
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_train_result_visualization.png",
+                "description": "Train Result Visualization in LSTM model"
+            },
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_train_test_result.PNG",
+                "description": "MSE and RMSE in Train Dataset in LSTM model"
+            },
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_valid_result_visualization.png",
+                "description": "Prediction in Validation Result in LSTM model"
+            },
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_valid_result.png",
+                "description": "Validation Result Visualization in LSTM model"
+            },
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_valid_test_result.PNG",
+                "description": "MSE and RMSE in Validation Dataset in LSTM model"
+            },
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_test_result.PNG",
+                "description": "Test Result in LSTM model"
+            },
+            {
+                "info": "/static/assets/images/portfolio/RUL/lstm_test_visualization.png",
+                "description": "Test Result Visualization in LSTM model"
+            }
         ]
     },
     {
@@ -129,7 +213,8 @@ projects = [
         "details": [
             "Analyze, Filter, and Visualize Data",
             "Training Data with Machine Learning Models: Random Forest, XGBoost, Decision Tree, ...",
-            "Predict Car Auction Price in each Model"
+            "Predict Car Auction Price in each Model",
+            "Fix bugs"
         ],
         "type": "Data Analyst & Machine Learning",
         "language": "Python",
@@ -155,8 +240,9 @@ projects = [
         "link": "https://github.com/alinh99/phanbietgiongnamnu",
         "details": [
             "Analyze, Filter, and Visualize Data",
-            "Training Data with Machine Learning Models: XGBoost, Decision Tree, Random Forest",
-            "Get results in each model (R^2, MSE, RMSE)"
+            "Training Data with Machine Learning Models: XGBoost, Linear Regression, Random Forests, Neural Network",
+            "Get results in each model (R^2 score)",
+            "Fix bugs"
         ],
         "type": "Data Analyst & Machine Learning",
         "language": "Python",
@@ -171,16 +257,28 @@ projects = [
             "Matplotlib",
             "Sklearn",
             "Seaborn"
+        ],
+        "images": [
+            {
+                "info": "/static/assets/images/portfolio/VoiceRecognitionBasedOnSex/data_distribution.png" ,
+                "description": "Relationship between voice of male and female in function of meanfun and meanfreq"
+            },
+            {
+                "info": "/static/assets/images/portfolio/VoiceRecognitionBasedOnSex/results_visualization.png",
+                "description": "Accuracy Score in each model"
+            }
         ]
     },
     {
-        "title": "House Price Prediction",
-        "link": "https://github.com/alinh99/predict-house-price",
+        "title": "Face Recognition for Attendance System",
+        "link": "https://github.com/davidsandberg/facenet",
         "details": [
-            "Training Data with Machine Learning Models: Linear Regression",
-            "Predict House Price in the Model"
+            "Collect and filter data from employees in the company",
+            "Fine-tuning ResNet v1 model with my own dataset without any GPUs",
+            "Integrate this model into Odoo External API Project",
+            "Fix bugs"
         ],
-        "type": "Machine Learning",
+        "type": "App",
         "language": "Python",
         "platform_developments": [
             "Windows",
@@ -188,20 +286,26 @@ projects = [
             "MacOS"
         ],
         "libraries": [
-            "Pandas",
-            "Numpy",
-            "Matplotlib",
-            "Seaborn"
+            "tensorflow==1.7",
+            "scipy",
+            "scikit-learn"
+            "opencv-python",
+            "h5py",
+            "matplotlib",
+            "Pillow",
+            "requests",
+            "psutil"
         ]
     },
     {
-        "title": "Probability of Passing Prediction",
-        "link": "https://github.com/alinh99/predict-the-probability-of-passing",
+        "title": "ChatRWKV",
+        "link": "https://github.com/BlinkDL/ChatRWKV",
         "details": [
-            "Training Data with Machine Learning Models: Logistic Regression",
-            "Predict House Price in the Model"
+            "Data filtering and convert to JSONlines",
+            "Fine-tuning RWKV-4b model with my own dataset without any GPUs",
+            "Fix bugs"
         ],
-        "type": "Machine Learning",
+        "type": "App",
         "language": "Python",
         "platform_developments": [
             "Windows",
@@ -209,8 +313,42 @@ projects = [
             "MacOS"
         ],
         "libraries": [
-            "Numpy",
-            "Matplotlib",
+            "tokenizers>=0.13.2",
+            "prompt_toolkit"
+        ]
+    },
+    {
+        "title": "GPT4all",
+        "link": "https://github.com/nomic-ai/gpt4all",
+        "details": [
+            "Data filtering and convert to JSONlines",
+            "Fine-tuning facebook/opt-350m model with my own dataset without any GPUs",
+            "Write APIs with Flask to integrate this model",
+            "Fix bugs"
+        ],
+        "type": "App",
+        "language": "Python",
+        "platform_developments": [
+            "Windows",
+            "Linux",
+            "MacOS"
+        ],
+        "libraries": [
+            "accelerate",
+            "datasets",
+            "einops",
+            "torchmetrics",
+            "evaluate",
+            "transformers>=4.28.0",
+            "wandb",
+            "peft",
+            "nodelist-inflator",
+            "deepspeed",
+            "sentencepiece",
+            "jsonlines",
+            "nomic",
+            "scikit-learn",
+            "matplotlib"
         ]
     },
     {
@@ -218,7 +356,8 @@ projects = [
         "link": "https://github.com/alinh99/DataCrawling",
         "details": [
             "Crawl Data from website",
-            "Export to CSV file"
+            "Export to CSV file",
+            "Fix bugs"
         ],
         "type": "Web",
         "language": "Python",
@@ -257,7 +396,8 @@ projects = [
         "link": "#",
         "details": [
             "Get user data by tags",
-            "Get metrics of Tiktok Business"
+            "Get metrics of Tiktok Business",
+            "Fix bugs"
         ],
         "type": "Web",
         "language": "Python",
@@ -274,9 +414,11 @@ projects = [
     },
     {
         "title": "Odoo External API",
-        "link": "#",
+        "link": "https://play.google.com/store/apps/details?id=com.paraceltech.phuman&hl=vi&gl=US&pli=1",
         "details": [
             "Integrate Odoo External API into an application using modules: Employees, HR, Payroll, Attendance",
+            "Fix bugs",
+            "Link: https://play.google.com/store/apps/details?id=com.paraceltech.phuman&hl=vi&gl=US&pli=1",
         ],
         "type": "App",
         "language": "Python",
@@ -294,7 +436,9 @@ projects = [
         "link": "https://artisanspirits.com.au/",
         "details": [
             "Write APIs to get all distilleries, blogs, pagination, search, ...",
-            "Create new module in Odoo and custom Products module"
+            "Create new module in Odoo and custom Products module",
+            "Fix bugs",
+            "Link: https://artisanspirits.com.au/"
         ],
         "type": "Web",
         "language": "Python",
@@ -305,26 +449,6 @@ projects = [
         ],
         "libraries": [
             "Odoo Framework"
-        ]
-    },
-    {
-        "title": "English for IT",
-        "link": "https://github.com/alinh99/eng_for_it",
-        "details": [
-            "Front-end and Back-end handling for this app",
-            "Authentication: Firebase",
-            "Functions: Help students learn 4 skills: Reading, Writing, Speaking, and Listening via tests and calculate points after these tests",
-            "Data: Manual Input"
-        ],
-        "type": "App",
-        "language": "Dart & Flutter",
-        "platform_developments": [
-            "Android"
-        ],
-        "libraries": [
-            "Firebase",
-            "Text to Speech",
-            "Speech To Text"
         ]
     }
 ]
