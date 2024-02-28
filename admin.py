@@ -174,7 +174,7 @@ projects = [
                 "description": "Prediction in Validation Result in LSTM model"
             },
             {
-                "info": "/static/assets/images/portfolio/RUL/lstm_valid_result.png",
+                "info": "/static/assets/images/portfolio/RUL/lstm_valid_result.PNG",
                 "description": "Validation Result Visualization in LSTM model"
             },
             {
