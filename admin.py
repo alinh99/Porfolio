@@ -373,6 +373,16 @@ projects = [
         "libraries": [
             "ShopifyAPI",
             "Pandas",
+        ],
+        "images": [
+            {
+                "info": "/static/assets/images/portfolio/shopify/order_data.PNG",
+                "description": "Order Data"
+            },
+            {
+                "info": "/static/assets/images/portfolio/shopify/product_data.PNG",
+                "description": "Product Data"
+            }
         ]
     },
     {
