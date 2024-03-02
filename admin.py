@@ -19,7 +19,7 @@ general_information = {
         ✨
     """,
     "position": "Python Developer",
-    "degree": "Computer Engineer",
+    "degree": "Computer Science",
 }
 
 experiences = [
