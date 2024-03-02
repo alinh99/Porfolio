@@ -62,7 +62,7 @@ experiences = [
     },
     {
         "title": "AI Developer",
-        "time": "03/2023 - Present",
+        "time": "03/2023 - 01/2024",
         "company": "Paracel Technology Solutions",
         "jobs": [
             {
