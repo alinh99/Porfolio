@@ -1,5 +1,3 @@
-from flask import url_for
-
 general_information = {
     "name": "Ryan Nguyen",
     "address": "Danang, Vietnam",
