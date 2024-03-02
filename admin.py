@@ -55,7 +55,15 @@ experiences = [
                 "details": [
                     "Joining multiple tables to get data",
                 ],
-            }
+            },
+            {
+                "title": "Authentication with Flask:",
+                "details": [
+                    "Write APIs for register, login, and forgot password",
+                    "Send Email to get OTP in forgot password",
+                    "Using Postman for testing"
+                ],
+            },
         ]
     },
     {
@@ -131,6 +139,66 @@ projects = [
             },
         ]
     },
+
+    {
+        "title": "Authentication with Flask",
+        "link": "https://github.com/alinh99/FlaskAunthentication",
+        "details": [
+            "Write APIs for register, login, and forgot password",
+            "Send Email to get OTP in forgot password",
+            "Using Postman for testing",
+            "Database: SQL",
+            "Data Structure: a table named user containing user info and a table named forgot_password that contains otp and expired time is referenced by user_id in user table",
+            "Fix bugs and test in all cases"
+        ],
+        "type": "Website",
+        "language": "Python & Flask",
+        "platform_developments": [
+            "Windows",
+            "Linux",
+            "MacOS"
+        ],
+        "libraries": [
+            "Flask",
+            "smtp",
+            "Postman"
+        ],
+        "images": [
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/database.PNG",
+                "description": "Data structure"
+            },
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/register.PNG",
+                "description": "Register API"
+            },
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/login.PNG",
+                "description": "Login API"
+            },
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/forgot_password.PNG",
+                "description": "Forgot Password API"
+            },
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/email_OTP.jpg",
+                "description": "Email with OTP"
+            },
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/reset_password.PNG",
+                "description": "Reset Password"
+            },
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/login_after_reset_password.PNG",
+                "description": "Login with Old Password"
+            },
+            {
+                "info": "/static/assets/images/portfolio/FlaskAuthenticationSQLDatabase/login_after_reset_password_successfully.PNG",
+                "description": "Login with New Password"
+            },
+        ]
+    },
+
     {
         "title": "RUL Prediction",
         "link": "https://github.com/alinh99/CarAuctionPrediction",
