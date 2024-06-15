@@ -1,3 +1,5 @@
+from datetime import datetime
+
 skills = {
             "Data Analyst": 90, 
             "Python": 90, 
@@ -12,84 +14,59 @@ general_information = {
     "name": "Ryan Nguyen",
     "address": "Danang, Vietnam",
     "phone": "+84937739735",
-    "email": "alinh1803@gmail.com"
+    "email": "alinh1803@gmail.com",
+    "age": f"{datetime.now().year - 2000}"
 }
 
 experience = [
     {
-        "title": "Freelancer",
-        "time": "12/2023 - Present",
-        "company": "Freelance",
+        "title": "Python Freelancer Developer",
+        "time": "Dec 2023 - Present",
+        "company": "Upwork",
         "jobs": [
             {
-                "title": "Shopify API Tasks:",
+                "title": "Ad Managers",
                 "details": [
-                    "Handle Bulk Operations in GraphQL",
-                    "Get Order and Product data",
-                    "Export CSV file"
+                    "Integrated Shopify APIs to retrieve product data and handled bulk operations with GraphQL to manage pagination data.",
+                    "Integrated APIs from Facebook Ads, TikTok Business Manager, Snapchat Ads, Klaviyo APIs to obtain performance metrics.",
+                    "Deployed code to Google App Engine using Flask and managed daily operations with Google Scheduler.",
+                    "Exported data to CSV files for further analysis."
                 ],
             },
             {
                 "title": "Data Crawling:",
                 "details": [
-                    "Crawl data with Selenium",
-                    "Export CSV file"
+                    "Crawled data from both web and mobile applications.",
+                    "Implemented multiprocessing to optimize data crawling performance.",
+                    "Exported crawled data to CSV files for processing and analysis."
                 ],
             },
-            {
-                "title": "TikTok API:",
-                "details": [
-                    "Get user data by tags",
-                    "Get metrics of Tiktok Business"
-                ],
-            },
-            {
-                "title": "PostgreSQL:",
-                "details": [
-                    "Joining multiple tables to get data",
-                ],
-            }
         ]
     },
     {
-        "title": "AI Developer",
-        "time": "03/2023 - Present",
+        "title": "AI Software Developer",
+        "time": "June 2022 - Jan 2024",
         "company": "Paracel Technology Solutions",
         "jobs": [
             {
                 "title": "AI Tasks:",
                 "details": [
-                    "Analyze data and implement code for Regression Tasks.",
-                    "Research and build Graph Neural Network with Docker.",
-                    "Research and implement code for Deep Learning models.",
+                    "Researched and implemented code for various regression models including Random Forest, XGBoost, and Decision Tree.",
+                    "Researched and implemented deep learning models for time-series tasks including LSTM, MLP, CNN, and LSTM-CNN.",
+                    "Researched and implemented deep learning models such as YOLO and VGG16.",
                     "Research about LLM models."
+                    "Researched and built a Graph Neural Network, utilizing Docker for containerization."
                 ]
             },
             {
                 "title": "Odoo Tasks:",
                 "details": [
-                    "Develop and custom a specific module in Odoo.",
-                    "Integrate the External API of Odoo into an application.",
-                    "Integrate Odoo Rest API for an Odoo Website."
+                    "Implement external APIs and website APIs in Odoo projects.",
+                    "Developed and customized specific modules in Odoo.",
                 ]
             }
         ]
     },
-    {
-        "title": "Computer Vision Intern",
-        "time": "03/2020 - 09/2020",
-        "company": "FTECH CO., LTD",
-        "jobs": [
-            {
-                "title": "AI Tasks:",
-                "details": [
-                    "Research documents and practice about Image Processing, Open CV and Numpy, and basic algorithms in Feature.",
-                    "Analyze, filter, crawl, and label data in a specified project.",
-                    "Be familiar with Pytorch and basic researchs on YOLO algorithms."
-                ]
-            }
-        ]
-    }
 ]
 
 projects = [
