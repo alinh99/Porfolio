@@ -20,19 +20,10 @@ general_information = {
 
 experience = [
     {
-        "title": "Python Freelancer Developer",
-        "time": "Dec 2023 - Present",
-        "company": "Upwork",
+        "title": "Python Developer",
+        "time": "March 2023 - June 2024",
+        "company": "Paracel Technology Solutions",
         "jobs": [
-            {
-                "title": "Ad Managers",
-                "details": [
-                    "Integrated Shopify APIs to retrieve product data and handled bulk operations with GraphQL to manage pagination data.",
-                    "Integrated APIs from Facebook Ads, TikTok Business Manager, Snapchat Ads, Klaviyo APIs to obtain performance metrics.",
-                    "Deployed code to Google App Engine using Flask and managed daily operations with Google Scheduler.",
-                    "Exported data to CSV files for further analysis."
-                ],
-            },
             {
                 "title": "Data Crawling:",
                 "details": [
@@ -41,21 +32,10 @@ experience = [
                     "Exported crawled data to CSV files for processing and analysis."
                 ],
             },
-        ]
-    },
-    {
-        "title": "AI Software Developer",
-        "time": "June 2022 - Jan 2024",
-        "company": "Paracel Technology Solutions",
-        "jobs": [
             {
                 "title": "AI Tasks:",
                 "details": [
                     "Researched and implemented code for various regression models including Random Forest, XGBoost, and Decision Tree.",
-                    "Researched and implemented deep learning models for time-series tasks including LSTM, MLP, CNN, and LSTM-CNN.",
-                    "Researched and implemented deep learning models such as YOLO and VGG16.",
-                    "Research about LLM models."
-                    "Researched and built a Graph Neural Network, utilizing Docker for containerization."
                 ]
             },
             {
@@ -121,74 +101,12 @@ projects = [
         ]
     },
     {
-        "title": "Voice Recognition Based On Sex",
-        "link": "https://github.com/alinh99/phanbietgiongnamnu",
-        "details": [
-            "Analyze, Filter, and Visualize Data",
-            "Training Data with Machine Learning Models: XGBoost, Decision Tree, Random Forest",
-            "Get results in each model (R^2, MSE, RMSE)"
-        ],
-        "type": "Data Analyst & Machine Learning",
-        "language": "Python",
-        "platform_developments": [
-            "Windows",
-            "Linux",
-            "MacOS"
-        ],
-        "libraries": [
-            "Pandas",
-            "Numpy",
-            "Matplotlib",
-            "Sklearn",
-            "Seaborn"
-        ]
-    },
-    {
-        "title": "House Price Prediction",
-        "link": "https://github.com/alinh99/predict-house-price",
-        "details": [
-            "Training Data with Machine Learning Models: Linear Regression",
-            "Predict House Price in the Model"
-        ],
-        "type": "Machine Learning",
-        "language": "Python",
-        "platform_developments": [
-            "Windows",
-            "Linux",
-            "MacOS"
-        ],
-        "libraries": [
-            "Pandas",
-            "Numpy",
-            "Matplotlib",
-            "Seaborn"
-        ]
-    },
-    {
-        "title": "Probability of Passing Prediction",
-        "link": "https://github.com/alinh99/predict-the-probability-of-passing",
-        "details": [
-            "Training Data with Machine Learning Models: Logistic Regression",
-            "Predict House Price in the Model"
-        ],
-        "type": "Machine Learning",
-        "language": "Python",
-        "platform_developments": [
-            "Windows",
-            "Linux",
-            "MacOS"
-        ],
-        "libraries": [
-            "Numpy",
-            "Matplotlib",
-        ]
-    },
-    {
         "title": "Data Crawling from a website",
         "link": "https://github.com/alinh99/DataCrawling",
         "details": [
             "Crawl Data from website",
-            "Export to CSV file"
+            "Export to CSV file",
+            "Multi-processing handling"
         ],
         "type": "Web Crawling",
         "language": "Python",
@@ -200,80 +118,6 @@ projects = [
         "libraries": [
             "Selenium",
             "Pandas",
-        ]
-    },
-    {
-        "title": "Shopify API",
-        "link": "https://github.com/alinh99/pythonShopify",
-        "details": [
-            "Handle Bulk Operations in GraphQL",
-            "Get Order and Product data",
-            "Export CSV file"
-        ],
-        "type": "Shopify API",
-        "language": "Python",
-        "platform_developments": [
-            "Windows",
-            "Linux",
-            "MacOS"
-        ],
-        "libraries": [
-            "ShopifyAPI",
-            "Pandas",
-        ]
-    },
-    {
-        "title": "TikTok API",
-        "link": "#",
-        "details": [
-            "Get user data by tags",
-            "Get metrics of Tiktok Business"
-        ],
-        "type": "Tiktok API",
-        "language": "Python",
-        "platform_developments": [
-            "Windows",
-            "Linux",
-            "MacOS"
-        ],
-        "libraries": [
-            "Tiktok_business_api",
-            "Pyktok",
-            "Pandas"
-        ]
-    },
-    {
-        "title": "Odoo External API",
-        "link": "#",
-        "details": [
-            "Integrate Odoo External API into an application using modules: Employees, HR, Payroll, Attendance",
-        ],
-        "type": "App",
-        "language": "Python",
-        "platform_developments": [
-            "Windows",
-            "Linux",
-            "MacOS"
-        ],
-        "libraries": [
-            "Odoo Framework"
-        ]
-    },
-    {
-        "title": "Odoo Website API",
-        "link": "#",
-        "details": [
-            "Integrate Odoo Website API to build a website in Odoo"
-        ],
-        "type": "Web",
-        "language": "Python",
-        "platform_developments": [
-            "Windows",
-            "Linux",
-            "MacOS"
-        ],
-        "libraries": [
-            "Odoo Framework"
         ]
     },
     {
