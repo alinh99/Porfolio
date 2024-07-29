@@ -48,14 +48,6 @@ def portfolio_details(portfolio_id):
 def html_page(page_name):
     return render_template(page_name)
 
-# def write_to_file(data):
-#     with open('database.txt', mode='a') as database:
-#         email = data['email']
-#         subject = data['subject']
-#         message = data['message']
-#         file = database.write(f'\n{email},{subject},{message}')
-
-
 def write_to_csv(data):
     with open('database.csv', 'a', newline='') as csvfile:
         email = data['email']
@@ -63,7 +55,6 @@ def write_to_csv(data):
         message = data['message']
         writer = csv.writer(csvfile)
         writer.writerow([email, subject, message])
-
 
 @app.route('/submit_form', methods=['GET', 'POST'])
 def submit_form():
